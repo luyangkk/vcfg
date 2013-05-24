@@ -32,13 +32,13 @@ set smartcase
 " editor settings
 set history=1000
 set nocompatible
-set nofoldenable                                                  " disable folding"
+set nofoldenable                                                  " disable folding
 set confirm                                                       " prompt when existing from an unsaved file
 set backspace=indent,eol,start                                    " More powerful backspacing
-set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors "
+set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors
 set mouse=a                                                       " use mouse in all modes
-set report=0                                                      " always report number of lines changed                "
-set nowrap                                                        " dont wrap lines
+set report=0                                                      " always report number of lines changed
+"set nowrap                                                        " dont wrap lines
 set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
 set number                                                        " show line numbers
 set showmatch                                                     " show matching bracket (briefly jump)
@@ -63,7 +63,7 @@ autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
+autocmd FileType python setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 
@@ -102,7 +102,8 @@ let NERDCompactSexyComs=1
 
 " ctrlp
 set wildignore+=*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_working_path_mode=0
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
@@ -115,7 +116,7 @@ hi IndentGuidesEven ctermbg=black
 let g:user_zen_expandabbr_key='<C-j>'
 
 " NeoComplCache
-let g:neocomplcache_enable_at_startup=1
+"let g:neocomplcache_enable_at_startup=1
 let g:neoComplcache_disableautocomplete=1
 "let g:neocomplcache_enable_underbar_completion = 1
 "let g:neocomplcache_enable_camel_case_completion = 1
